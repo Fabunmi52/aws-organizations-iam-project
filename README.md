@@ -3,67 +3,7 @@ AWS Organizations and IAM implementation for managing multiple AWS accounts with
 # AWS Organizations & IAM Setup Project
 
 ## Overview
-
 This project demonstrates how to manage multiple AWS accounts using AWS Organizations and implement Role-Based Access Control (RBAC) using IAM.
-
-## Architecture
-                         ┌──────────────────────────┐
-                         │   AWS ORGANIZATION       │
-                         │  (Management Account)    │
-                         └────────────┬─────────────┘
-                                      │
-          ┌───────────────────────────┼───────────────────────────┐
-          │                           │                           │
-          ▼                           ▼                           ▼
-
- ┌─────────────────┐      ┌─────────────────┐      ┌─────────────────┐
- │ Development     │      │ Testing         │      │ Production      │
- │ AWS Account     │      │ AWS Account     │      │ AWS Account     │
- └─────────────────┘      └─────────────────┘      └─────────────────┘
-
-                                      │
-                                      ▼
-
-                      ┌─────────────────────────┐
-                      │ IAM ACCESS MANAGEMENT   │
-                      └───────────┬─────────────┘
-                                  │
-
-      ┌───────────────────────────┼───────────────────────────┐
-      │                           │                           │
-      ▼                           ▼                           ▼
-
-┌─────────────┐          ┌─────────────┐           ┌─────────────┐
-│ Developers  │          │  Testers    │           │   Admins    │
-└──────┬──────┘          └──────┬──────┘           └──────┬──────┘
-       │                        │                         │
-       ▼                        ▼                         ▼
-
- ┌──────────┐            ┌──────────┐           ┌─────────────────┐
- │ John     │            │ David    │           │ Sarah           │
- │ Mary     │            └──────────┘           └─────────────────┘
- └──────────┘
-
-      ┌──────────────────────────────────────────────────────┐
-      │                  IAM POLICIES                        │
-      └──────────────────────────────────────────────────────┘
-
-Developers:
-✓ EC2 Access
-✓ S3 Access
-✗ IAM Management
-
-Testers:
-✓ View EC2
-✓ Read S3
-✗ Resource Creation
-
-Admins:
-✓ Full Administrator Access
-
-Auditors:
-✓ Read-Only Access
-✗ No Modifications
 
 ## AWS Accounts
 
