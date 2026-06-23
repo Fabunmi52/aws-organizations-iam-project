@@ -66,7 +66,7 @@ Reviewed AWS documentation and tested SCP restrictions in a sandbox environment.
 - RBAC implementation
 - Cloud governance principles
 
-  ## Future Enhancements
+## Future Enhancements
 
 - Implement IAM Identity Center
 - Configure SCPs
