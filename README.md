@@ -1,60 +1,74 @@
-<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/5a773153-141f-4f3e-a833-17fa9488815e" /># aws-organizations-iam-project
-AWS Organizations and IAM implementation for managing multiple AWS accounts with role-based access control.
-# AWS Organizations & IAM Setup Project
+# AWS Organizations & IAM Access Management Project
 
 ## Overview
-This project demonstrates how to manage multiple AWS accounts using AWS Organizations and implement Role-Based Access Control (RBAC) using IAM.
+This project demonstrates how to implement a secure multi-account AWS environment using AWS Organizations and IAM.
+The goal was to understand centralized governance, identity management, and role-based access control in AWS.
 
-## AWS Accounts
+## Architecture Diagram
 
-- Development Account
-- Testing Account
-- Production Account
+<img width="1536" height="1024" alt="ChatGPT Image Jun 23, 2026, 05_49_04 AM" src="https://github.com/user-attachments/assets/e460319a-577a-4c55-9d84-aeb3456b657d" />
 
-## IAM Groups
-
-### Developers
-- John
-- Mary
-
-### Testers
-- David
-
-### Admins
-- Sarah
-
-### Auditors
-- James
-
-## Permissions
-
-### Developers
-- EC2 Access
-- S3 Access
-- CloudWatch Access
-
-### Testers
-- Read-only access
-
-### Admins
-- Full Administrator Access
-
-### Auditors
-- ReadOnly Access
-
-## Security Principles
-
-- Least Privilege
-- Role-Based Access Control (RBAC)
-- MFA
-- CloudTrail Logging
-
-## Skills Demonstrated
+## Technologies Used
 
 - AWS Organizations
 - IAM
 - IAM Policies
 - IAM Groups
-- Cloud Security
-- Governance
-- Access Management
+- AWS Management Console
+
+## Project Objectives
+- Create multiple AWS accounts
+- Implement RBAC
+- Configure IAM Policies
+- Apply Least Privilege
+- Improve Cloud Governance
+
+
+### Implementation Steps
+
+### Step 1: Create AWS Organization
+
+1. Sign into AWS Management Account
+2. Enable AWS Organizations
+3. Create Development Account
+4. Create Testing Account
+5. Create Production Account
+
+### Step 1: IAM Groups
+
+Developers
+Testers
+Admins
+Auditors
+
+### Step 1: Permissions
+
+| Group      | Permissions |
+| ---------- | ----------- |
+| Developers | EC2, S3     |
+| Testers    | Read-only   |
+| Admins     | Full Access |
+| Auditors   | Read-only   |
+
+
+## Challenges
+
+Challenge:
+Understanding Service Control Policies (SCPs)
+
+Solution:
+Reviewed AWS documentation and tested SCP restrictions in a sandbox environment.
+
+## Lessons Learned
+
+- Importance of IAM
+- Multi-account best practices
+- RBAC implementation
+- Cloud governance principles
+
+  ## Future Enhancements
+
+- Implement IAM Identity Center
+- Configure SCPs
+- Integrate AWS Config
+- Automate setup with Terraform
